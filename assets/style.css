@@ -575,7 +575,7 @@ nav {
 }
 
 .connect-section a {
-  font-size: 150px; /* Adjust font size as needed */
+  font-size: 120px; /* Adjust font size as needed */
   color: var(--text-color); /* Text color */
   margin-bottom: 20px; /* Space below the heading */
   font-weight: bold;
