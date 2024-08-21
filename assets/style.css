@@ -253,9 +253,13 @@ nav {
   margin-top: 30px;
 }
 
-.sidebar .logo a{
+.sidebar .logo .logo-name{
     font-size: 20px;
     color: var(--text-color);
+}
+
+.sidebar .logo .logo-short{
+  display: none;
 }
 
 .sidebar .logo p{
@@ -620,9 +624,7 @@ nav {
 /* About Section */
 
 .about-section {
-  text-align: left; 
-  /* padding: 50px 20px;  */
-  background-color: var(--background-color); 
+  text-align: left;  
 }
 
 .about-section h1 {
@@ -1062,7 +1064,7 @@ nav {
 
 
 /* 1024px */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
 
 .content {
@@ -1153,46 +1155,169 @@ nav {
 }
 
 
-/* 768px */
-
-@media (max-width: 768px) {
+/* For devices with a width of 768px or less */
+@media (min-width: 481px) and (max-width: 768px) {
+    
   .container {
-    flex-direction: column;
-  }
-
-  nav {
-    width: 100%;
-    position: static;
-    padding: 15px;
-  }
-
-  .content-right {
-    margin-left: 0;
-  }
-
-  .content {
-    padding: 30px;
-  }
-
-  .frames-container {
-    flex-direction: column;
-  }
-
-  .frame {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .resume-download-btn, .project-btn, .cta-button a {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
-
-  .connect-section a {
-    font-size: 120px;
-  }
-
-  .about-section p {
-    width: 90%;
-  }
+    flex-direction: column; 
 }
+
+nav {
+    position: relative; /* Change to relative or keep fixed as needed */
+    width: 100%; /* Full width to span across the top */
+    padding: 20px 30px; /* Adjust padding for top layout */
+    flex-direction: row; /* Stack items vertically */
+    align-items: flex-end;
+    height: auto; /* Adjust height for top layout */
+    z-index: 1000; 
+    gap: 20px;
+}
+
+.sidebar .logo {
+  margin-bottom: 20px; /* Space between logo and nav links */
+  align-self: center;
+}
+
+
+.sidebar .logo .logo-name,
+.sidebar .logo p{
+  display: none;
+}
+
+.sidebar .logo .logo-short{
+display: block;
+}
+
+.sidebar .logo a {
+    font-size: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.sidebar ul {
+    width: 80%;
+    padding: 0; /* Remove top padding */
+    display: flex;
+    flex-direction: row; /* Ensure links are stacked */
+    align-items: center;
+    margin-left: 100px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    width: 100%; /* Full width for li items */
+}
+
+.sidebar ul li a {
+    font-size: 14px;
+    width: 100%; /* Full width for a links */
+    text-align: center; /* Center the text */
+
+}
+
+
+.content-right{
+  margin-left: 50px;
+  overflow-y: auto; 
+  height: 100vh;
+}
+
+.content {
+  padding: 50px 50px 0 50px;
+}
+
+.frame img {
+    height: 220px;
+}
+
+.content-section {
+  padding: 20px 0;
+}
+
+.boxes-container {
+  gap: 25px;
+}
+
+.box {
+  padding: 15px;
+}
+
+.box img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.box-content h3 {
+  font-size: 18px;
+}
+
+.box-content p {
+  font-size: 14px;
+}
+
+.connect-section a {
+  font-size: 80px;
+  margin-bottom: 10px; 
+}
+
+.about-section p {
+  width: 90%;
+}
+
+.education {
+  margin-top: 30px;
+}
+
+.education h4 {
+  font-size: 20px;
+}
+
+.education i {
+  font-size: 22px; 
+}
+
+.cert-details h3 {
+  font-size: 22px;
+}
+
+.project-section {
+  margin-bottom: 100px;
+}
+
+.card img {
+  height: 220px;
+  padding: 20px;
+}
+
+.card p {
+  font-size: 16px;
+  padding: 0 10px 20px 20px;
+}
+
+.stack-card img {
+  width: 60px;
+  height: 60px;
+}
+
+.contact-card {
+  margin: 0 50px 50px 20px;
+}
+
+.contact-card h3 {
+  margin-left: 50px;
+}
+
+.contact-info {
+  flex-direction: column;
+  gap: 30px;
+}
+
+}
+
+
+/* For devices with a width of 480px */
+@media (max-width: 480px) {
+
+}
+
