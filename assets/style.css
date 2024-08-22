@@ -1270,6 +1270,10 @@ display: block;
   margin-bottom: 10px; 
 }
 
+.connect-section a::before{
+  font-size: 60px;
+}
+
 .about-section p {
   width: 90%;
 }
@@ -1404,7 +1408,7 @@ display: block;
   .sidebar ul li a {
     font-size: 14px;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .content-right{
@@ -1486,6 +1490,10 @@ display: block;
 .connect-section a {
   font-size: 50px;
   margin-bottom: 10px; 
+}
+
+.connect-section a::before{
+  font-size: 30px;
 }
 
 .about-section h1 {
