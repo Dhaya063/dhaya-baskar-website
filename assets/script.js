@@ -17,3 +17,22 @@ function copyToClipboard(elementId, buttonElement) {
         console.error('Could not copy text: ', err);
     });
 }
+
+
+// Scroll animation
+
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } 
+        });
+    }, { threshold: 0.3 });
+
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+});

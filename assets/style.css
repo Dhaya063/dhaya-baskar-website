@@ -751,7 +751,9 @@ nav {
   color: black; /* Change text color on hover */
 }
 
-
+.download-btn i{
+  margin-right: 5px;
+}
 
 /* Experience */
 
@@ -1333,3 +1335,93 @@ display: block;
 
 }
 
+
+
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start below the viewport */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.show {
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.show.fadeInUp {
+  animation: fadeInUp 0.6s forwards;
+}
+
+.animate-on-scroll.show.fadeInLeft {
+  animation: fadeInLeft 0.6s forwards;
+}
+
+.animate-on-scroll.show.fadeInRight {
+  animation: fadeInRight 0.6s forwards;
+}
+
+.animate-on-scroll.show.zoomIn {
+  animation: zoomIn 0.6s forwards;
+}
