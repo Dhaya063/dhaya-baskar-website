@@ -36,3 +36,27 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+
+
+// burger menu
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+const burgerIcon = burgerMenu.querySelector('i');
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    if (navLinks.classList.contains('active')) {
+        burgerIcon.classList.remove('fa-bars');
+        burgerIcon.classList.add('fa-times');
+    } else {
+        burgerIcon.classList.remove('fa-times');
+        burgerIcon.classList.add('fa-bars');
+    }
+});
+
+navLinks.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    burgerIcon.classList.remove('fa-times');
+    burgerIcon.classList.add('fa-bars');
+});
