@@ -1340,7 +1340,7 @@ display: block;
 /* For devices with a width of 480px */
 @media (max-width: 480px) {
 
-  .container {
+  .container { 
     flex-direction: column; 
 }
 
@@ -1373,7 +1373,7 @@ display: block;
     align-self: center;
     display: flex;
     justify-content: space-between;
-    gap: 350px;
+    gap: 320px;
   }
 
   .sidebar .logo a {
