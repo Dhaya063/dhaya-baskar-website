@@ -1224,7 +1224,6 @@ display: block;
 
 }
 
-
 .content-right{
   margin-left: 50px;
   overflow-y: auto; 
@@ -1233,6 +1232,10 @@ display: block;
 
 .content {
   padding: 50px 50px 0 50px;
+}
+
+.intro h1{
+  font-size: 44px;
 }
 
 .frame img {
