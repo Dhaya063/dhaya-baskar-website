@@ -816,6 +816,15 @@ nav {
   font-size: 48px; /* Adjust size as needed */
 }
 
+/* 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; 
+  margin: 50px 0;
+} */
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -823,6 +832,14 @@ nav {
   gap: 30px; /* Space between cards */
   margin: 50px 0;
 }
+
+/* Ensure the last card in an odd row aligns to the left */
+.cards-container::after {
+  content: "";
+  flex: 1 1 300px; /* Forces the last item to align left */
+  max-width: calc(50% - 15px); /* Adjust based on the gap size */
+}
+
 
 .card {
   background-color: var(--sidebar-bg-color);
@@ -1618,8 +1635,6 @@ display: block;
 }
 
 }
-
-
 
 
 /* Animation */
